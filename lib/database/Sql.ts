@@ -20,14 +20,20 @@ export class Sql {
         }
     }
 
-    public selectBySku(sku: string) {
+    public selectBySku(sku: string, callback: (results)=>void) {
         this.connect();
-        console.log(` data : ${sku})`);
+        
         this.client.query(`
-            Select wid,qty from Stock where sku = '${sku}'
-            `, function (error, results, fields) {
-            if (error) throw error;
-            console.log('The solution is: ', results[0]);
+            Select wid,qty from Stock where sku = ?`, 
+            sku,
+            (error, results, fields) => {
+                if (error) throw error;
+                
+                console.log(`Data return by query the ${sku} sku : `,results);
+                let jsonResults = {sku : `${sku}`, stock : results};
+                callback(jsonResults);
         });
+
+
     }
 }

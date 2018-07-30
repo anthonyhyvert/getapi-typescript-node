@@ -7,7 +7,11 @@ const sql = new Sql();
 export class StockController{
 
     public getContacts (req: Request, res: Response) { 
-        console.log(`Stock for SKU ${req.params.sku} :`);
-        sql.selectBySku(req.params.sku);
+
+        sql.selectBySku( req.params.sku, 
+            (result)=>{
+                res.status(200).json(result);
+            }
+        );
     }
 }

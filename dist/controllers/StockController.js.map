@@ -1,1 +1,0 @@
-{"version":3,"file":"StockController.js","sourceRoot":"","sources":["../../lib/controllers/StockController.ts"],"names":[],"mappings":";;AAEA;IAEW,WAAW,CAAE,GAAY,EAAE,GAAa;QAC3C,OAAO,CAAC,GAAG,CAAC,iBAAiB,GAAG,CAAC,MAAM,CAAC,GAAG,IAAI,CAAC,CAAC;QAGjD,uCAAuC;QACvC,eAAe;QACf,yBAAyB;QACzB,QAAQ;QACR,yBAAyB;QACzB,MAAM;IAEV,CAAC;CACJ;AAdD,0CAcC"}

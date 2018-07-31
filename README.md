@@ -28,3 +28,13 @@ CREATE TABLE stock (
 
 CREATE UNIQUE INDEX sku_wid_idx ON stock(sku,wid); 
 ```
+
+## Launch the Get API
+```
+npm run dev
+```
+
+## Call get api
+```
+http://localhost:3000/stock/[YOURSKU]
+```
